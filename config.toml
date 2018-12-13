@@ -1,0 +1,28 @@
+baseURL = "https://fergarciafer.github.io/base-de-datos/"
+languageCode = "en-us"
+title = "Base de datos"
+
+publishDir = "docs"
+
+theme = "hugo-theme-learn"
+[params]
+  # Change default color scheme with a variant one. Can be "red", "blue", "green".
+  themeVariant = "red"
+
+[[menu.shortcuts]]
+name = "<i class='fas fa-gavel'></i> Código de Conducta"
+identifier = "code_of_conduct"
+url = "/basics"
+weight = 20
+
+[[menu.shortcuts]]
+name = "<i class='fas fa-tasks'></i> Licencia"
+identifier = "license"
+url = "/basics"
+weight = 30
+
+[[menu.shortcuts]]
+name = "<i class='fas fa-bullhorn'></i> Créditos"
+identifier = "credits"
+url = "/basics"
+weight = 40
