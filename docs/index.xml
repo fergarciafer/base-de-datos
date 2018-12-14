@@ -6,9 +6,22 @@
     <description>Recent content on Base de datos</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Thu, 13 Dec 2018 20:46:27 -0300</lastBuildDate>
     
 	<atom:link href="https://fergarciafer.github.io/base-de-datos/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Creditos</title>
+      <link>https://fergarciafer.github.io/base-de-datos/creditos/</link>
+      <pubDate>Thu, 13 Dec 2018 20:46:27 -0300</pubDate>
+      
+      <guid>https://fergarciafer.github.io/base-de-datos/creditos/</guid>
+      <description>El material del curso está siendo desarrollado por Fernando García desde diciembre de 2018.
+Sitio El sitio es construido con el generador de sitios estáticos hugo
+El tema de hugo implementado es Learn
+Ideas Muchas ideas para la organización del contenido fueron tomadas de las lecciones de The Carpentries</description>
+    </item>
     
   </channel>
 </rss>
