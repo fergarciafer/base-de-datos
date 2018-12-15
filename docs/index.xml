@@ -1,18 +1,46 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Base de datos</title>
+    <title>Curso de Base de Datos on Base de datos</title>
     <link>https://fergarciafer.github.io/base-de-datos/</link>
-    <description>Recent content on Base de datos</description>
+    <description>Recent content in Curso de Base de Datos on Base de datos</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 13 Dec 2018 20:46:27 -0300</lastBuildDate>
+    <lastBuildDate>Sat, 15 Dec 2018 15:57:57 -0300</lastBuildDate>
     
 	<atom:link href="https://fergarciafer.github.io/base-de-datos/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Creditos</title>
+      <title>Bibliografía</title>
+      <link>https://fergarciafer.github.io/base-de-datos/bibliografia/</link>
+      <pubDate>Sat, 15 Dec 2018 15:57:57 -0300</pubDate>
+      
+      <guid>https://fergarciafer.github.io/base-de-datos/bibliografia/</guid>
+      <description> A First Course in Database Systems (3rd edition) - Ullman y Widom  </description>
+    </item>
+    
+    <item>
+      <title>Código de conducta</title>
+      <link>https://fergarciafer.github.io/base-de-datos/codigo_de_conducta/</link>
+      <pubDate>Sat, 15 Dec 2018 15:57:14 -0300</pubDate>
+      
+      <guid>https://fergarciafer.github.io/base-de-datos/codigo_de_conducta/</guid>
+      <description>Redactar codigo de conducta</description>
+    </item>
+    
+    <item>
+      <title>Configuracion</title>
+      <link>https://fergarciafer.github.io/base-de-datos/configuracion/</link>
+      <pubDate>Sat, 15 Dec 2018 14:35:25 -0300</pubDate>
+      
+      <guid>https://fergarciafer.github.io/base-de-datos/configuracion/</guid>
+      <description>Instalación de SQLite Para hacer los ejercicios y experimentar con el lenguaje SQL utilizaremos el sistema de base de datos SQLite desde la línea de comandos. La instalación de SQLite es muy simple y no requiere la configuración ni de un servidor ni de un cliente.
+Utiliza el siguiente link para la descarga del software de SQLite https://www.sqlite.org/download.html. Selecciona los binarios precompilados apropiados para tu sistema operativo. En el caso de Windows te recomiendo descargar sqlite-tools-win32-x86-3260000.</description>
+    </item>
+    
+    <item>
+      <title>Créditos</title>
       <link>https://fergarciafer.github.io/base-de-datos/creditos/</link>
       <pubDate>Thu, 13 Dec 2018 20:46:27 -0300</pubDate>
       

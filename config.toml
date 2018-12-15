@@ -8,21 +8,36 @@ theme = "hugo-theme-learn"
 [params]
   # Change default color scheme with a variant one. Can be "red", "blue", "green".
   themeVariant = "red"
+# Activate Search
+[outputs]
+home = [ "HTML", "RSS", "JSON"]
 
 [[menu.shortcuts]]
 name = "<i class='fas fa-gavel'></i> Código de Conducta"
 identifier = "code_of_conduct"
-url = "/basics"
+url = "/codigo_de_conducta"
 weight = 20
+
+[[menu.shortcuts]]
+name = "<i class='fas fa-cog'></i> Configuración"
+identifier = "configuration"
+url = "/configuracion"
+weight = 30
+
+[[menu.shortcuts]]
+name = "<i class='fas fa-book'></i> Bibliografía"
+identifier = "bibliography"
+url = "/bibliografia"
+weight = 30
 
 [[menu.shortcuts]]
 name = "<i class='fas fa-tasks'></i> Licencia"
 identifier = "license"
-url = "/basics"
-weight = 30
+url = "/licencia"
+weight = 50
 
 [[menu.shortcuts]]
 name = "<i class='fas fa-bullhorn'></i> Créditos"
 identifier = "credits"
 url = "/creditos"
-weight = 40
+weight = 60

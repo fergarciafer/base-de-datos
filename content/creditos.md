@@ -1,5 +1,5 @@
 ---
-title: "Creditos"
+title: "Créditos"
 date: 2018-12-13T20:46:27-03:00
 draft: false
 ---

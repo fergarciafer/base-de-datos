@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/base-de-datos/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/base-de-datos/images/favicon.png" type="image/x-icon" />
-    <title>Tags :: Base de datos</title>
+    <title>Configuracion :: Base de datos</title>
 
     
     <link href="/base-de-datos/css/nucleus.css?1544905794" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/base-de-datos/tags/">
+  <body class="" data-url="/base-de-datos/configuracion/">
     <nav id="sidebar" class="">
 
 
@@ -510,7 +510,13 @@
                     
           
           
-            Tags
+            
+            
+          
+          
+            <a href='/base-de-datos/'>Curso de Base de Datos</a> > Configuracion
+          
+         
           
         
                  
@@ -519,7 +525,14 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#instalación-de-sqlite">Instalación de SQLite</a></li>
+</ul></li>
+</ul>
+</nav>
     </div>
 </div>
 
@@ -531,7 +544,7 @@
         
         <div id="body-inner">
           
-            <h1>Tags</h1>
+            <h1>Configuracion</h1>
           
 
         
@@ -539,9 +552,53 @@
 
 
 
+<h2 id="instalación-de-sqlite">Instalación de SQLite</h2>
+
+<p>Para hacer los ejercicios y experimentar con el lenguaje SQL utilizaremos el sistema de base de datos SQLite desde la línea de comandos. La instalación de SQLite es muy simple y no requiere la configuración ni de un servidor ni de un cliente.</p>
+
+<p>Utiliza el siguiente link para la descarga del software de SQLite <a href="https://www.sqlite.org/download.html">https://www.sqlite.org/download.html</a>. Selecciona los binarios precompilados apropiados para tu sistema operativo. En el caso de Windows te recomiendo descargar <code>sqlite-tools-win32-x86-3260000.zip
+(1.68 MiB).</code></p>
+
+<p>Para instalar SQLlite:</p>
+
+<ol>
+<li>Crea una nueva carpeta. Te recomiendo <code>C:\sqlite</code></li>
+<li>Extrae en dicha carpeta el contenido del archivo que acabas de descargar. Deberías ver el archivo <code>sqlite3.exe</code> en la carpeta <code>sqlite</code>.</li>
+</ol>
+
+<p>Para verificar la instalación abre la línea de comando y navega hasta la carpeta <code>c:\sqlite</code></p>
+
+<pre><code class="language-cmd">cd \sqlite
+</code></pre>
+
+<p>Luego tipea:</p>
+
+<pre><code class="language-cmd">sqlite3
+</code></pre>
+
+<p>Si todo anduvo bien, deberías ver algo similar a lo siguiente:</p>
+
+<pre><code class="language-cmd">SQLite version 3.26.0 2018-12-01 12:34:55
+Enter &quot;.help&quot; for usage hints.
+Connected to a transient in-memory database.
+Use &quot;.open FILENAME&quot; to reopen on a persistent database.
+sqlite&gt;
+</code></pre>
+
+<p>Para salir de SQLite utiliza el comando .quit</p>
+
+<pre><code class="language-cmd">.quit
+</code></pre>
+
+<div class="notices note" ><p><strong>Felicitaciones!</strong> Ya tienes preparado tu entorno para experimentar con el lenguaje SQL y resolver los ejercicios del curso de base de datos. Ve por un <i class='fas fa-coffee'></i> !</p>
+</div>
+
+
+
 <footer class=" footline" >
 	
 </footer>
+
 
         
         </div> 
@@ -885,3 +942,4 @@
 
   </body>
 </html>
+

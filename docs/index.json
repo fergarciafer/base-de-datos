@@ -1,0 +1,169 @@
+[
+{
+	"uri": "https://fergarciafer.github.io/base-de-datos/clase1/",
+	"title": "Clase 1",
+	"tags": [],
+	"description": "",
+	"content": " Chapter X Some Chapter title Lorem Ipsum.\n"
+},
+{
+	"uri": "https://fergarciafer.github.io/base-de-datos/clase2/",
+	"title": "Clase 2",
+	"tags": [],
+	"description": "",
+	"content": " Chapter X Some Chapter title Lorem Ipsum.\n"
+},
+{
+	"uri": "https://fergarciafer.github.io/base-de-datos/clase3/",
+	"title": "Clase 3",
+	"tags": [],
+	"description": "",
+	"content": " Chapter X Some Chapter title Lorem Ipsum.\n"
+},
+{
+	"uri": "https://fergarciafer.github.io/base-de-datos/clase4/",
+	"title": "Clase 4",
+	"tags": [],
+	"description": "",
+	"content": " Chapter X Some Chapter title Lorem Ipsum.\n"
+},
+{
+	"uri": "https://fergarciafer.github.io/base-de-datos/clase5/",
+	"title": "Clase 5",
+	"tags": [],
+	"description": "",
+	"content": " Chapter X Some Chapter title Lorem Ipsum.\n"
+},
+{
+	"uri": "https://fergarciafer.github.io/base-de-datos/clase6/",
+	"title": "Clase 6",
+	"tags": [],
+	"description": "",
+	"content": " Chapter X Some Chapter title Lorem Ipsum.\n"
+},
+{
+	"uri": "https://fergarciafer.github.io/base-de-datos/clase7/",
+	"title": "Clase 7",
+	"tags": [],
+	"description": "",
+	"content": " Chapter X Some Chapter title Lorem Ipsum.\n"
+},
+{
+	"uri": "https://fergarciafer.github.io/base-de-datos/clase8/",
+	"title": "Clase 8",
+	"tags": [],
+	"description": "",
+	"content": " Chapter X Some Chapter title Lorem Ipsum.\n"
+},
+{
+	"uri": "https://fergarciafer.github.io/base-de-datos/clase9/",
+	"title": "Clase 9",
+	"tags": [],
+	"description": "",
+	"content": " Chapter X Some Chapter title Lorem Ipsum.\n"
+},
+{
+	"uri": "https://fergarciafer.github.io/base-de-datos/clase10/",
+	"title": "Clase 10",
+	"tags": [],
+	"description": "",
+	"content": " Chapter X Some Chapter title Lorem Ipsum.\n"
+},
+{
+	"uri": "https://fergarciafer.github.io/base-de-datos/clase11/",
+	"title": "Clase 11",
+	"tags": [],
+	"description": "",
+	"content": " Chapter X Some Chapter title Lorem Ipsum.\n"
+},
+{
+	"uri": "https://fergarciafer.github.io/base-de-datos/clase12/",
+	"title": "Clase 12",
+	"tags": [],
+	"description": "",
+	"content": " Chapter X Some Chapter title Lorem Ipsum.\n"
+},
+{
+	"uri": "https://fergarciafer.github.io/base-de-datos/clase13/",
+	"title": "Clase 13",
+	"tags": [],
+	"description": "",
+	"content": " Chapter X Some Chapter title Lorem Ipsum.\n"
+},
+{
+	"uri": "https://fergarciafer.github.io/base-de-datos/clase14/",
+	"title": "Clase 14",
+	"tags": [],
+	"description": "",
+	"content": " Chapter X Some Chapter title Lorem Ipsum.\n"
+},
+{
+	"uri": "https://fergarciafer.github.io/base-de-datos/clase15/",
+	"title": "Clase 15",
+	"tags": [],
+	"description": "",
+	"content": " Chapter X Some Chapter title Lorem Ipsum.\n"
+},
+{
+	"uri": "https://fergarciafer.github.io/base-de-datos/clase16/",
+	"title": "Clase 16",
+	"tags": [],
+	"description": "",
+	"content": " Chapter X Some Chapter title Lorem Ipsum.\n"
+},
+{
+	"uri": "https://fergarciafer.github.io/base-de-datos/clase17/",
+	"title": "Clase 17",
+	"tags": [],
+	"description": "",
+	"content": " Chapter X Some Chapter title Lorem Ipsum.\n"
+},
+{
+	"uri": "https://fergarciafer.github.io/base-de-datos/bibliografia/",
+	"title": "Bibliografía",
+	"tags": [],
+	"description": "",
+	"content": " A First Course in Database Systems (3rd edition) - Ullman y Widom  "
+},
+{
+	"uri": "https://fergarciafer.github.io/base-de-datos/codigo_de_conducta/",
+	"title": "Código de conducta",
+	"tags": [],
+	"description": "",
+	"content": "Redactar codigo de conducta\n"
+},
+{
+	"uri": "https://fergarciafer.github.io/base-de-datos/configuracion/",
+	"title": "Configuracion",
+	"tags": [],
+	"description": "",
+	"content": " Instalación de SQLite Para hacer los ejercicios y experimentar con el lenguaje SQL utilizaremos el sistema de base de datos SQLite desde la línea de comandos. La instalación de SQLite es muy simple y no requiere la configuración ni de un servidor ni de un cliente.\nUtiliza el siguiente link para la descarga del software de SQLite https://www.sqlite.org/download.html. Selecciona los binarios precompilados apropiados para tu sistema operativo. En el caso de Windows te recomiendo descargar sqlite-tools-win32-x86-3260000.zip (1.68 MiB).\nPara instalar SQLlite:\n Crea una nueva carpeta. Te recomiendo C:\\sqlite Extrae en dicha carpeta el contenido del archivo que acabas de descargar. Deberías ver el archivo sqlite3.exe en la carpeta sqlite.  Para verificar la instalación abre la línea de comando y navega hasta la carpeta c:\\sqlite\ncd \\sqlite  Luego tipea:\nsqlite3  Si todo anduvo bien, deberías ver algo similar a lo siguiente:\nSQLite version 3.26.0 2018-12-01 12:34:55 Enter \u0026quot;.help\u0026quot; for usage hints. Connected to a transient in-memory database. Use \u0026quot;.open FILENAME\u0026quot; to reopen on a persistent database. sqlite\u0026gt;  Para salir de SQLite utiliza el comando .quit\n.quit  Felicitaciones! Ya tienes preparado tu entorno para experimentar con el lenguaje SQL y resolver los ejercicios del curso de base de datos. Ve por un  !\n\r"
+},
+{
+	"uri": "https://fergarciafer.github.io/base-de-datos/creditos/",
+	"title": "Créditos",
+	"tags": [],
+	"description": "",
+	"content": " El material del curso está siendo desarrollado por Fernando García desde diciembre de 2018.\nSitio El sitio es construido con el generador de sitios estáticos hugo\nEl tema de hugo implementado es Learn\nIdeas Muchas ideas para la organización del contenido fueron tomadas de las lecciones de The Carpentries\n"
+},
+{
+	"uri": "https://fergarciafer.github.io/base-de-datos/categories/",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://fergarciafer.github.io/base-de-datos/",
+	"title": "Curso de Base de Datos",
+	"tags": [],
+	"description": "",
+	"content": " Curso de Base de Datos (Este curso aún se encuentra en desarrollo) Bienvenido al curso de Base de Datos! El material que encontrarás aquí está pensado para acompañar un curso de Introducción a las bases de datos de 17 clases. El material principal podrás encontrarlo en cada clase. La información sobre el software requerido podrás encontrarla en la sección de Configuración. La guía de lecturas complementarias sugeridas está publicada en la sección Bibliografía. También es importante que leas el Código de Conducta. Para saber todo lo que puedes hacer con el material aquí publicado visita la sección Licencia.\nFernando García\nPara poder experimentar con el lenguaje SQL y hacer los ejercicios del curso necesitarás instalar el sistema de base de datos SQLite.\n\rPrograma de clases    Clase \u0026nbsp; \u0026nbsp; \u0026nbsp; Temas a tratar     Clase 1 Introducción. El modelo relacional. Consultando bases de datos relacionales. Introducción al lenguaje SQL. La sentencia SELECT.   Clase 2 Variable de tabla y operadores de conjunto. Agregaciones. Valores nulos   Clase 3 Subqueries. La familia de operadores JOIN. Sentencias de modificación.   Clase 4 El modelo de Entidad Relación   Clase 5 UML   Clase 6 Restricciones. Triggers   Clase 7 Indices. Transacciones   Clase 8 Vistas. Autorizaciones   Clase 9 Albebra relacional   Clase 10 Teoría del diseño relacional   Clase 11 Teoría del diseño relacional   Clase 12 Procesamiento analítico   Clase 13 Recursividad   Clase 14 Datos semiestructurados    "
+},
+{
+	"uri": "https://fergarciafer.github.io/base-de-datos/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+}]
