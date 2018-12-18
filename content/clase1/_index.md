@@ -22,7 +22,7 @@ gantt
 
 A las bases de datos y a los sistemas de administración de bases de datos solemos representarlos de la siguiente manera:
 
-![Base de Datos](../../static/basededatos.png)
+![Base de Datos](basededatos.png)
 
 Pero...
 
