@@ -12,19 +12,19 @@
     <title>Clase 1 :: Base de datos</title>
 
     
-    <link href="/base-de-datos/css/nucleus.css?1544905794" rel="stylesheet">
-    <link href="/base-de-datos/css/fontawesome-all.min.css?1544905794" rel="stylesheet">
-    <link href="/base-de-datos/css/hybrid.css?1544905794" rel="stylesheet">
-    <link href="/base-de-datos/css/featherlight.min.css?1544905794" rel="stylesheet">
-    <link href="/base-de-datos/css/perfect-scrollbar.min.css?1544905794" rel="stylesheet">
-    <link href="/base-de-datos/css/auto-complete.css?1544905794" rel="stylesheet">
-    <link href="/base-de-datos/css/theme.css?1544905794" rel="stylesheet">
-    <link href="/base-de-datos/css/hugo-theme.css?1544905794" rel="stylesheet">
+    <link href="/base-de-datos/css/nucleus.css?1545176680" rel="stylesheet">
+    <link href="/base-de-datos/css/fontawesome-all.min.css?1545176680" rel="stylesheet">
+    <link href="/base-de-datos/css/hybrid.css?1545176680" rel="stylesheet">
+    <link href="/base-de-datos/css/featherlight.min.css?1545176680" rel="stylesheet">
+    <link href="/base-de-datos/css/perfect-scrollbar.min.css?1545176680" rel="stylesheet">
+    <link href="/base-de-datos/css/auto-complete.css?1545176680" rel="stylesheet">
+    <link href="/base-de-datos/css/theme.css?1545176680" rel="stylesheet">
+    <link href="/base-de-datos/css/hugo-theme.css?1545176680" rel="stylesheet">
     
-      <link href="/base-de-datos/css/theme-red.css?1544905794" rel="stylesheet">
+      <link href="/base-de-datos/css/theme-red.css?1545176680" rel="stylesheet">
     
 
-    <script src="/base-de-datos/js/jquery-2.x.min.js?1544905794"></script>
+    <script src="/base-de-datos/js/jquery-2.x.min.js?1545176680"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -51,14 +51,14 @@
     <span data-search-clear=""><i class="fas fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/base-de-datos/js/lunr.min.js?1544905794"></script>
-<script type="text/javascript" src="/base-de-datos/js/auto-complete.js?1544905794"></script>
+<script type="text/javascript" src="/base-de-datos/js/lunr.min.js?1545176680"></script>
+<script type="text/javascript" src="/base-de-datos/js/auto-complete.js?1545176680"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/fergarciafer.github.io\/base-de-datos\/";
     
 </script>
-<script type="text/javascript" src="/base-de-datos/js/search.js?1544905794"></script>
+<script type="text/javascript" src="/base-de-datos/js/search.js?1545176680"></script>
 
     
   </div>
@@ -80,7 +80,7 @@
         
         ">
       <a href="/base-de-datos/clase1/">
-          <b>1. </b>Clase 1
+          Clase 1
           
       </a>
       
@@ -502,6 +502,8 @@
                         </a>
                     </span>
                   
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
                   <span class="links">
                  
                  
@@ -521,14 +523,38 @@
                   </span>
                 </div>
                 
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#introducción">Introducción</a>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#qué-es-una-base-de-datos">Qué es una base de datos?</a></li>
+<li><a href="#y-qué-es-un-sistema-de-administración-de-base-de-datos">Y qué es un sistema de administración de base de datos?</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
               </div>
             </div>
             
 
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1>Clase 1</h1>
           
 
         
@@ -536,19 +562,62 @@
 
 
 
-<h3 id="chapter-x">Chapter X</h3>
+<div class="mermaid" align="center">
+gantt
+        dateFormat H
+        title HOJA DE RUTA
+        Introducción            :      des1, 19, 15m
+        El modelo relacional    :      des2, after des1 , 30m
+        Break                   :      des3, after des2, 30m
+        Consultando RDBMSs      :      des4, after des3, 25m
+        El lenguaje SQL         :      des5, after des4, 20m
+        Ejercitación            :crit, des6, after des5, 1h
+</div>
 
-<h1 id="some-chapter-title">Some Chapter title</h1>
 
-<p>Lorem Ipsum.</p>
+<h2 id="introducción">Introducción</h2>
+
+<p>A las bases de datos y a los sistemas de administración de bases de datos solemos representarlos de la siguiente manera:</p>
+
+<p><img src="../../static/basededatos.png" alt="Base de Datos" /></p>
+
+<p>Pero&hellip;</p>
+
+<h5 id="qué-es-una-base-de-datos">Qué es una base de datos?</h5>
+
+<blockquote>
+<p>Una base de datos es una colección de datos gestionada por un sistema de administración de base de datos.</p>
+</blockquote>
+
+<h5 id="y-qué-es-un-sistema-de-administración-de-base-de-datos">Y qué es un sistema de administración de base de datos?</h5>
+
+<blockquote>
+<p>Un sistema de administración de bases de datos (DBMS) proporciona acceso multiusuario a cantidades masivas de datos persistentes de manera eficiente, confiable, conveniente y segura.</p>
+</blockquote>
+
+<div class="notices tip" ><p><strong>DBMS</strong> es la sigla en inglés de Data Base Management System. En español se suele usar la sigla <strong>SGBD</strong> (Sistema de Gestión de Base de Datos). En este curso optamos por las siglas en inglés para referirnos a este tipo de sistemas.</p>
+</div>
+
+
+<p>Nos encontramos con siete adjetivos:</p>
+
+<ol>
+<li>&ldquo;Multiusuario&rdquo;</li>
+<li>&ldquo;Masivo&rdquo;</li>
+<li>&ldquo;Persistente&rdquo;</li>
+<li>&ldquo;Eficiente&rdquo;</li>
+<li>&ldquo;Confiable&rdquo;</li>
+<li>&ldquo;Conveniente&rdquo;</li>
+<li>&ldquo;Seguro&rdquo;</li>
+</ol>
+
+<p>Veamos en detalle cada uno de estos siete adjetivos que determinan a un sistema de administración de base de datos.</p>
 
 
 <footer class=" footline" >
 	
 </footer>
 
-        
-            </div> 
         
         </div> 
         
@@ -873,20 +942,20 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/base-de-datos/js/clipboard.min.js?1544905794"></script>
-    <script src="/base-de-datos/js/perfect-scrollbar.min.js?1544905794"></script>
-    <script src="/base-de-datos/js/perfect-scrollbar.jquery.min.js?1544905794"></script>
-    <script src="/base-de-datos/js/jquery.sticky.js?1544905794"></script>
-    <script src="/base-de-datos/js/featherlight.min.js?1544905794"></script>
-    <script src="/base-de-datos/js/html5shiv-printshiv.min.js?1544905794"></script>
-    <script src="/base-de-datos/js/highlight.pack.js?1544905794"></script>
+    <script src="/base-de-datos/js/clipboard.min.js?1545176680"></script>
+    <script src="/base-de-datos/js/perfect-scrollbar.min.js?1545176680"></script>
+    <script src="/base-de-datos/js/perfect-scrollbar.jquery.min.js?1545176680"></script>
+    <script src="/base-de-datos/js/jquery.sticky.js?1545176680"></script>
+    <script src="/base-de-datos/js/featherlight.min.js?1545176680"></script>
+    <script src="/base-de-datos/js/html5shiv-printshiv.min.js?1545176680"></script>
+    <script src="/base-de-datos/js/highlight.pack.js?1545176680"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/base-de-datos/js/modernizr.custom.71422.js?1544905794"></script>
-    <script src="/base-de-datos/js/learn.js?1544905794"></script>
-    <script src="/base-de-datos/js/hugo-learn.js?1544905794"></script>
+    <script src="/base-de-datos/js/modernizr.custom.71422.js?1545176680"></script>
+    <script src="/base-de-datos/js/learn.js?1545176680"></script>
+    <script src="/base-de-datos/js/hugo-learn.js?1545176680"></script>
 
-    <link href="/base-de-datos/mermaid/mermaid.css?1544905794" type="text/css" rel="stylesheet" />
-    <script src="/base-de-datos/mermaid/mermaid.js?1544905794"></script>
+    <link href="/base-de-datos/mermaid/mermaid.css?1545176680" type="text/css" rel="stylesheet" />
+    <script src="/base-de-datos/mermaid/mermaid.js?1545176680"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -4,7 +4,7 @@
 	"title": "Clase 1",
 	"tags": [],
 	"description": "",
-	"content": " Chapter X Some Chapter title Lorem Ipsum.\n"
+	"content": " gantt\rdateFormat H\rtitle HOJA DE RUTA\rIntroducción : des1, 19, 15m\rEl modelo relacional : des2, after des1 , 30m\rBreak : des3, after des2, 30m\rConsultando RDBMSs : des4, after des3, 25m\rEl lenguaje SQL : des5, after des4, 20m\rEjercitación :crit, des6, after des5, 1h\r\rIntroducción A las bases de datos y a los sistemas de administración de bases de datos solemos representarlos de la siguiente manera:\nPero\u0026hellip;\nQué es una base de datos?  Una base de datos es una colección de datos gestionada por un sistema de administración de base de datos.\n Y qué es un sistema de administración de base de datos?  Un sistema de administración de bases de datos (DBMS) proporciona acceso multiusuario a cantidades masivas de datos persistentes de manera eficiente, confiable, conveniente y segura.\n DBMS es la sigla en inglés de Data Base Management System. En español se suele usar la sigla SGBD (Sistema de Gestión de Base de Datos). En este curso optamos por las siglas en inglés para referirnos a este tipo de sistemas.\n\rNos encontramos con siete adjetivos:\n \u0026ldquo;Multiusuario\u0026rdquo; \u0026ldquo;Masivo\u0026rdquo; \u0026ldquo;Persistente\u0026rdquo; \u0026ldquo;Eficiente\u0026rdquo; \u0026ldquo;Confiable\u0026rdquo; \u0026ldquo;Conveniente\u0026rdquo; \u0026ldquo;Seguro\u0026rdquo;  Veamos en detalle cada uno de estos siete adjetivos que determinan a un sistema de administración de base de datos.\n"
 },
 {
 	"uri": "https://fergarciafer.github.io/base-de-datos/clase2/",
