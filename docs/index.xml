@@ -17,7 +17,7 @@
       <pubDate>Sat, 15 Dec 2018 15:57:57 -0300</pubDate>
       
       <guid>https://fergarciafer.github.io/base-de-datos/bibliografia/</guid>
-      <description> A First Course in Database Systems (3rd edition) - Ullman y Widom  </description>
+      <description> Lecturas adicionales propuestas  A First Course in Database Systems (3rd edition) - Ullman y Widom  Sitios recomendados  Sitio Web de SQLite - https://www.sqlite.org/index.html  Material adicional sugerido  Tutorial de SQLite - http://www.sqlitetutorial.net/  </description>
     </item>
     
     <item>
@@ -35,8 +35,8 @@
       <pubDate>Sat, 15 Dec 2018 14:35:25 -0300</pubDate>
       
       <guid>https://fergarciafer.github.io/base-de-datos/configuracion/</guid>
-      <description>Instalación de SQLite Para hacer los ejercicios y experimentar con el lenguaje SQL utilizaremos el sistema de base de datos SQLite desde la línea de comandos. La instalación de SQLite es muy simple y no requiere la configuración ni de un servidor ni de un cliente.
-Utiliza el siguiente link para la descarga del software de SQLite https://www.sqlite.org/download.html. Selecciona los binarios precompilados apropiados para tu sistema operativo. En el caso de Windows te recomiendo descargar sqlite-tools-win32-x86-3260000.</description>
+      <description>Instalación de SQLite Para hacer los ejercicios y experimentar con el lenguaje SQL utilizaremos el sistema de base de datos SQLite desde la línea de comandos. La instalación de SQLite es muy simple y no requiere de la configuración ni de un servidor ni de un cliente.
+Si te encuentras en problemas a la hora de configurar tu ambiente de trabajo puedes crear un issue. Trataremos de ayudarte a resolverlo tan pronto como podamos.</description>
     </item>
     
     <item>
@@ -46,9 +46,9 @@ Utiliza el siguiente link para la descarga del software de SQLite https://www.sq
       
       <guid>https://fergarciafer.github.io/base-de-datos/creditos/</guid>
       <description>El material del curso está siendo desarrollado por Fernando García desde diciembre de 2018.
-Sitio El sitio es construido con el generador de sitios estáticos hugo
-El tema de hugo implementado es Learn
-Ideas Muchas ideas para la organización del contenido fueron tomadas de las lecciones de The Carpentries</description>
+Una gran parte del contenido teórico está basado en el libro &amp;ldquo;A First Course in Database Systems (3rd edition)&amp;rdquo; de Ullman y Widom.
+El contenido de los mini cursos de base de datos de la Universidad de Standford constituyen una base importante en el desarrollo de este curso.
+En varios ejercicios utilizamos la base de datos Chinook</description>
     </item>
     
   </channel>

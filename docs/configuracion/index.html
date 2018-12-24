@@ -12,19 +12,19 @@
     <title>Configuracion :: Base de datos</title>
 
     
-    <link href="/base-de-datos/css/nucleus.css?1545178857" rel="stylesheet">
-    <link href="/base-de-datos/css/fontawesome-all.min.css?1545178857" rel="stylesheet">
-    <link href="/base-de-datos/css/hybrid.css?1545178857" rel="stylesheet">
-    <link href="/base-de-datos/css/featherlight.min.css?1545178857" rel="stylesheet">
-    <link href="/base-de-datos/css/perfect-scrollbar.min.css?1545178857" rel="stylesheet">
-    <link href="/base-de-datos/css/auto-complete.css?1545178857" rel="stylesheet">
-    <link href="/base-de-datos/css/theme.css?1545178857" rel="stylesheet">
-    <link href="/base-de-datos/css/hugo-theme.css?1545178857" rel="stylesheet">
+    <link href="/base-de-datos/css/nucleus.css?1545621149" rel="stylesheet">
+    <link href="/base-de-datos/css/fontawesome-all.min.css?1545621149" rel="stylesheet">
+    <link href="/base-de-datos/css/hybrid.css?1545621149" rel="stylesheet">
+    <link href="/base-de-datos/css/featherlight.min.css?1545621149" rel="stylesheet">
+    <link href="/base-de-datos/css/perfect-scrollbar.min.css?1545621149" rel="stylesheet">
+    <link href="/base-de-datos/css/auto-complete.css?1545621149" rel="stylesheet">
+    <link href="/base-de-datos/css/theme.css?1545621149" rel="stylesheet">
+    <link href="/base-de-datos/css/hugo-theme.css?1545621149" rel="stylesheet">
     
-      <link href="/base-de-datos/css/theme-red.css?1545178857" rel="stylesheet">
+      <link href="/base-de-datos/css/theme-red.css?1545621149" rel="stylesheet">
     
 
-    <script src="/base-de-datos/js/jquery-2.x.min.js?1545178857"></script>
+    <script src="/base-de-datos/js/jquery-2.x.min.js?1545621149"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -51,14 +51,14 @@
     <span data-search-clear=""><i class="fas fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/base-de-datos/js/lunr.min.js?1545178857"></script>
-<script type="text/javascript" src="/base-de-datos/js/auto-complete.js?1545178857"></script>
+<script type="text/javascript" src="/base-de-datos/js/lunr.min.js?1545621149"></script>
+<script type="text/javascript" src="/base-de-datos/js/auto-complete.js?1545621149"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/fergarciafer.github.io\/base-de-datos\/";
     
 </script>
-<script type="text/javascript" src="/base-de-datos/js/search.js?1545178857"></script>
+<script type="text/javascript" src="/base-de-datos/js/search.js?1545621149"></script>
 
     
   </div>
@@ -554,7 +554,11 @@
 
 <h2 id="instalación-de-sqlite">Instalación de SQLite</h2>
 
-<p>Para hacer los ejercicios y experimentar con el lenguaje SQL utilizaremos el sistema de base de datos SQLite desde la línea de comandos. La instalación de SQLite es muy simple y no requiere la configuración ni de un servidor ni de un cliente.</p>
+<p>Para hacer los ejercicios y experimentar con el lenguaje SQL utilizaremos el sistema de base de datos SQLite desde la línea de comandos. La instalación de SQLite es muy simple y no requiere de la configuración ni de un servidor ni de un cliente.</p>
+
+<div class="notices warning" ><p>Si te encuentras en problemas a la hora de configurar tu ambiente de trabajo puedes <a href="https://github.com/fergarciafer/base-de-datos/issues">crear un issue</a>. Trataremos de ayudarte a resolverlo tan pronto como podamos.</p>
+</div>
+
 
 <p>Utiliza el siguiente link para la descarga del software de SQLite <a href="https://www.sqlite.org/download.html">https://www.sqlite.org/download.html</a>. Selecciona los binarios precompilados apropiados para tu sistema operativo. En el caso de Windows te recomiendo descargar <code>sqlite-tools-win32-x86-3260000.zip
 (1.68 MiB).</code></p>
@@ -588,6 +592,63 @@ sqlite&gt;
 <p>Para salir de SQLite utiliza el comando .quit</p>
 
 <pre><code class="language-cmd">.quit
+</code></pre>
+
+<p>Para poder hacer los ejercicios necesitarás contar con una base de datos de ejemplo que utilizaremos en el curso. A continuación descarga el siguiente archivo que contiene la base de ejemplo llamada <strong>Chinook</strong>.</p>
+
+<section class="attachments orange">
+	<label>
+		<i class="fas fa-paperclip" aria-hidden="true"></i>
+		Descargas
+	</label>
+	
+		
+	
+	<div class="attachments-files">
+	
+		
+		
+			<li>
+				<a href="/base-de-datos/configuracion.files/chinook.zip" >
+					chinook.zip
+				</a>
+				(298 ko)
+			</li>
+		
+	
+	<div>
+	
+</section>
+
+
+
+<div class="notices note" ><p><strong>Chinook</strong> es una base de datos de ejemplo típica disponible para diversos DBMSs (SQL Server, Oracle, MySQL, SQLite, etc.). Puede ser creada ejecutando un simple script. Más información acerca de Chinook <a href="https://github.com/lerocha/chinook-database">aquí</a></p>
+</div>
+
+
+<p>Descomprime el archivo descargado en la carpeta <code>C:\sqlite</code>. Desde la línea de comandos navega hasta dicha carpeta.</p>
+
+<pre><code class="language-cmd">cd c:\sqlite
+</code></pre>
+
+<p>A continuación establece una conexión hacia la base que has acabado de descargar:</p>
+
+<pre><code class="language-cmd">c:\sqlite&gt;sqlite3 chinook
+SQLite version 3.26.0 2018-12-01 12:34:55
+Enter &quot;.help&quot; for usage hints.
+sqlite&gt;
+</code></pre>
+
+<p>Ejecuta el siguiente comando:</p>
+
+<pre><code class="language-cmd">.database
+</code></pre>
+
+<p>Obtendrás un resultado análogo al siguiente:</p>
+
+<pre><code class="language-cmd">sqlite&gt; .database
+main: c:\sqlite\chinook
+sqlite&gt;
 </code></pre>
 
 <div class="notices note" ><p><strong>Felicitaciones!</strong> Ya tienes preparado tu entorno para experimentar con el lenguaje SQL y resolver los ejercicios del curso de base de datos. Ve por un <i class='fas fa-coffee'></i> !</p>
@@ -921,20 +982,20 @@ sqlite&gt;
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/base-de-datos/js/clipboard.min.js?1545178857"></script>
-    <script src="/base-de-datos/js/perfect-scrollbar.min.js?1545178857"></script>
-    <script src="/base-de-datos/js/perfect-scrollbar.jquery.min.js?1545178857"></script>
-    <script src="/base-de-datos/js/jquery.sticky.js?1545178857"></script>
-    <script src="/base-de-datos/js/featherlight.min.js?1545178857"></script>
-    <script src="/base-de-datos/js/html5shiv-printshiv.min.js?1545178857"></script>
-    <script src="/base-de-datos/js/highlight.pack.js?1545178857"></script>
+    <script src="/base-de-datos/js/clipboard.min.js?1545621149"></script>
+    <script src="/base-de-datos/js/perfect-scrollbar.min.js?1545621149"></script>
+    <script src="/base-de-datos/js/perfect-scrollbar.jquery.min.js?1545621149"></script>
+    <script src="/base-de-datos/js/jquery.sticky.js?1545621149"></script>
+    <script src="/base-de-datos/js/featherlight.min.js?1545621149"></script>
+    <script src="/base-de-datos/js/html5shiv-printshiv.min.js?1545621149"></script>
+    <script src="/base-de-datos/js/highlight.pack.js?1545621149"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/base-de-datos/js/modernizr.custom.71422.js?1545178857"></script>
-    <script src="/base-de-datos/js/learn.js?1545178857"></script>
-    <script src="/base-de-datos/js/hugo-learn.js?1545178857"></script>
+    <script src="/base-de-datos/js/modernizr.custom.71422.js?1545621149"></script>
+    <script src="/base-de-datos/js/learn.js?1545621149"></script>
+    <script src="/base-de-datos/js/hugo-learn.js?1545621149"></script>
 
-    <link href="/base-de-datos/mermaid/mermaid.css?1545178857" type="text/css" rel="stylesheet" />
-    <script src="/base-de-datos/mermaid/mermaid.js?1545178857"></script>
+    <link href="/base-de-datos/mermaid/mermaid.css?1545621149" type="text/css" rel="stylesheet" />
+    <script src="/base-de-datos/mermaid/mermaid.js?1545621149"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

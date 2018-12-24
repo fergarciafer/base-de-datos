@@ -9,12 +9,11 @@ weight = 10
 gantt
         dateFormat H
         title HOJA DE RUTA
-        Introducción            :      des1, 19, 15m
+        Introducción            :      des1, 19, 30m
         El modelo relacional    :      des2, after des1 , 30m
-        Break                   :      des3, after des2, 30m
-        Consultando RDBMSs      :      des4, after des3, 25m
-        El lenguaje SQL         :      des5, after des4, 20m
-        Ejercitación            :crit, des6, after des5, 1h
+        Consultando RDBMSs      :      des3, after des2, 30m
+        Break                   :      des4, after des3, 30m
+        Ejercitación            :crit, des5, after des4, 1h
 {{< /mermaid >}}
 
 
@@ -52,9 +51,9 @@ En esta definición nos encontramos con siete adjetivos:
 
 Veamos en detalle cada uno de estos adjetivos que determinan a un sistema de administración de base de datos.
 
-**Multiusuario**. Múltiples usuarios pueden estar operando simultáneamente sobre la misma base de datos. Muchas aplicaciones pueden acceder a los datos de forma concurrente. El DBMS cuenta con mecanismos de control de concurrencia que aseguran que los datos permanezcan consistentes. El control de concurrencia tiene alguna similitud al control de concurrencia que se puede hacer a nivel de archivos o variables; pero en este caso se centra en los datos.
+**Multiusuario**. Múltiples usuarios pueden estar operando simultáneamente sobre la misma base de datos. Muchas aplicaciones pueden acceder a los datos de forma concurrente. El DBMS cuenta con mecanismos de control de concurrencia que aseguran que los datos permanezcan consistentes y no haya interacciones inesperadas entre los usuarios. El control de concurrencia tiene alguna similitud al control de concurrencia que se puede hacer a nivel de archivos o variables; pero en este caso se centra en los datos.
 
-**Masivo**. Un DBMS debe estar preparado para manejar datos a escala masiva. Hoy en día un DBMS puede gestionar terabytes de datos, o  incluso terabytes de datos generados diariamente.
+**Masivo**. Un DBMS está preparado para manejar datos a escala masiva. Hoy en día un DBMS puede gestionar terabytes de datos, o  incluso terabytes de datos generados diariamente.
 
 **Persistente**. Los datos de una base de datos sobreviven a los programas que se ejecutan y utilizan dichos datos. En la ejecución de un programa informático típico, creamos y operamos con variables; y cuando el programa finaliza las variables desaparecen. En un DBMS los datos trascienden a los programas. Los programas se inician y terminan, pero los datos permanecen en el DBMS.
 
@@ -104,19 +103,51 @@ Luego está el **diseñador** de la base de datos. El diseñador establece el es
 
 ## El modelo relacional
 
-_(En desarrollo)_
+El modelo relacional nació hace más de 40 años cuando el científico informático inglés Ted Codd propuso que los sistemas de bases de datos debían presentarle los datos a los usuarios en vistas organizadas como tablas. A dichas vistas organizadas como tablas, Codd las llamó **relaciones**. Detrás de escena podrían existir estructuras de datos complejas que permitieran dar respuesta rápida a diversidad de consultas. Pero a diferencia de los sistemas de bases de datos anteriores el usuario de la base de datos no debería preocuparse por dichas estructuras de almacenamiento. Las consultas podrían expresarse en un lenguaje de alto nivel haciendo más eficiente el trabajo de los programadores. A lo largo de este curso profundizaremos en SQL, el lenguaje más importante basado en el modelo relacional.
+
+Hoy en día, el modelo relacional es el más difundido del mundo con un gran número de implementaciones comerciales eficientes. Es un modelo extremadamente simple y ofrece la posibilidad de consultar la base de datos utilizando el lenguaje SQL.
+
+La construcción primaria del modelo relacional es la **relación**. Una base de datos está conformada por un conjunto de relaciones, también llamadas **tablas**. Una relación es una tabla de dos dimensiones conformadas por filas y columnas. Veamos esto con un ejemplo. Nuestro ejemplo será una base de datos de álbumes musicales. Aquí comenzaremos con una tabla de álbumes.
+
+![Tabla](Tabla.png?width=20pc)
+
+ Luego tenemos el concepto de **atributo**. Cada relación tiene un conjunto predefinido de columnas o atributos, cada uno de los cuales tiene un nombre. Para nuestra tabla de álbumes, cada álbum tiene los siguientes atributos: identificación (AlbumId), título y tapa.
+
+ ![Tabla y Columnas](TablaYColumnas.png?width=30pc)
+
+A continuación, los datos reales se almacenan en **tuplas** o **filas** de la tabla.  Cada atributo o columna de la tabla tiene un **tipo** (a veces denominado **dominio**). Por ejemplo, el identificador del álbum puede ser un número entero, el nombre puede ser una cadena de caracteres, la tapa puede ser un archivo png.
+
+Al nombre de la relación junto al conjunto de atributos que la definen se los conoce como **esquema** de la relación. Al conjunto de esquemas de todas las relaciones de la base de datos se lo llama esquema de base de datos.
+
+ ![Tuplas](Tuplas.png?width=30pc)
+
+Existe un valor especial que está en cualquier tipo de cualquier columna conocido como **nulo**. El concepto de nulo es muy importante en las bases de datos relacionales. Los valores nulos se utilizan para denotar que un valor particular puede ser desconocido o no definido.
+
+Otro concepto importante en las bases de datos relacionales es el **clave**. Una clave es un atributo en una relación donde cada valor para ese atributo es único. Entonces, si nos fijamos en la relación de los álbumes, podemos estar casi seguros de que el identificador del álbum será una clave. En otras palabras, cada tupla de la relación álbumes tendrá un identificador único. Puede que te estés preguntando por qué es importante tener atributos que se identifican como claves. En realidad, a las claves se le pueden dar varios usos. Uno de ellos es solo para identificar tuplas específicas. Por lo tanto, si desea ejecutar una consulta para obtener una tupla específica de la base de datos, lo haría solicitando esa tupla por su clave. Otro uso posible es el de los **índices**. Los índices son estructuras que se pueden utilizar en las bases de datos y que permiten encontrar muy rápido tuplas específicas.
+
+Veamos ahora cómo se crean relaciones o tablas en el lenguaje SQL. Es muy simple:
+
+``` sql
+CREATE TABLE "albums"
+(
+    [AlbumId] INTEGER,
+    [Title] NVARCHAR(160)
+);
+```
+
+A medida que vayamos avanzando en el curso iremos viendo con mucho más detalle todos estos conceptos.
 
 ***
 
 ## Consultando bases de datos relacionales
 
-_(En desarrollo)_
+Veamos a continuación los pasos básicos para crear y utilizar una base de datos relacional.
+El primer paso es diseñar el esquema de la base de datos y luego crear el esquema usando un lenguaje de definición de datos. El esquema consiste en la estructura de las relaciones y los atributos de esas relaciones.
+El siguiente paso es cargar la base de datos con los datos iniciales. Es bastante común que la base de datos se cargue inicialmente a partir de datos que provienen de una fuente externa. Una vez cargados los datos, tenemos un montón de tuplas en nuestras relaciones.
+Ahora, estamos listos para consultar y modificar datos. Luego vamos a tener usuarios humanos que consultan directamente a la base de datos. Eso suele suceder a través de una aplicación o un sitio web; aparecerá un usuario, hará una consulta a la base de datos y obtendrá una respuesta. También habrá usuarios que quieran insertar nuevos datos o actualizar algunos de los datos.
+Ese es el paradigma básico de consultar y actualizar bases de datos relacionales.
 
-***
-
-## El lenguaje SQL
-
-_(En desarrollo)_
+En todos los lenguajes de consulta relacionales, cuando realizas una consulta a través de un conjunto de relaciones, se obtiene una relación como resultado. El álgebra relacional es un lenguaje formal que está muy bien fundamentado teóricamente. Por el contrario, SQL es un lenguaje real o implementado. Ese es el que se va a ejecutar en una aplicación de base de datos implementada real. Pero el lenguaje SQL tiene como base el álgebra relacional.
 
 ***
 

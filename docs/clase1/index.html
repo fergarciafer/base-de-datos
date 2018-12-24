@@ -12,19 +12,19 @@
     <title>Clase 1 :: Base de datos</title>
 
     
-    <link href="/base-de-datos/css/nucleus.css?1545178857" rel="stylesheet">
-    <link href="/base-de-datos/css/fontawesome-all.min.css?1545178857" rel="stylesheet">
-    <link href="/base-de-datos/css/hybrid.css?1545178857" rel="stylesheet">
-    <link href="/base-de-datos/css/featherlight.min.css?1545178857" rel="stylesheet">
-    <link href="/base-de-datos/css/perfect-scrollbar.min.css?1545178857" rel="stylesheet">
-    <link href="/base-de-datos/css/auto-complete.css?1545178857" rel="stylesheet">
-    <link href="/base-de-datos/css/theme.css?1545178857" rel="stylesheet">
-    <link href="/base-de-datos/css/hugo-theme.css?1545178857" rel="stylesheet">
+    <link href="/base-de-datos/css/nucleus.css?1545621148" rel="stylesheet">
+    <link href="/base-de-datos/css/fontawesome-all.min.css?1545621148" rel="stylesheet">
+    <link href="/base-de-datos/css/hybrid.css?1545621148" rel="stylesheet">
+    <link href="/base-de-datos/css/featherlight.min.css?1545621148" rel="stylesheet">
+    <link href="/base-de-datos/css/perfect-scrollbar.min.css?1545621148" rel="stylesheet">
+    <link href="/base-de-datos/css/auto-complete.css?1545621148" rel="stylesheet">
+    <link href="/base-de-datos/css/theme.css?1545621148" rel="stylesheet">
+    <link href="/base-de-datos/css/hugo-theme.css?1545621148" rel="stylesheet">
     
-      <link href="/base-de-datos/css/theme-red.css?1545178857" rel="stylesheet">
+      <link href="/base-de-datos/css/theme-red.css?1545621148" rel="stylesheet">
     
 
-    <script src="/base-de-datos/js/jquery-2.x.min.js?1545178857"></script>
+    <script src="/base-de-datos/js/jquery-2.x.min.js?1545621148"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -51,14 +51,14 @@
     <span data-search-clear=""><i class="fas fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/base-de-datos/js/lunr.min.js?1545178857"></script>
-<script type="text/javascript" src="/base-de-datos/js/auto-complete.js?1545178857"></script>
+<script type="text/javascript" src="/base-de-datos/js/lunr.min.js?1545621148"></script>
+<script type="text/javascript" src="/base-de-datos/js/auto-complete.js?1545621148"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/fergarciafer.github.io\/base-de-datos\/";
     
 </script>
-<script type="text/javascript" src="/base-de-datos/js/search.js?1545178857"></script>
+<script type="text/javascript" src="/base-de-datos/js/search.js?1545621148"></script>
 
     
   </div>
@@ -540,6 +540,9 @@
 </ul></li>
 </ul></li>
 </ul></li>
+<li><a href="#el-modelo-relacional">El modelo relacional</a></li>
+<li><a href="#consultando-bases-de-datos-relacionales">Consultando bases de datos relacionales</a></li>
+<li><a href="#ejercitación">Ejercitación</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -566,22 +569,23 @@
 gantt
         dateFormat H
         title HOJA DE RUTA
-        Introducción            :      des1, 19, 15m
+        Introducción            :      des1, 19, 30m
         El modelo relacional    :      des2, after des1 , 30m
-        Break                   :      des3, after des2, 30m
-        Consultando RDBMSs      :      des4, after des3, 25m
-        El lenguaje SQL         :      des5, after des4, 20m
-        Ejercitación            :crit, des6, after des5, 1h
+        Consultando RDBMSs      :      des3, after des2, 30m
+        Break                   :      des4, after des3, 30m
+        Ejercitación            :crit, des5, after des4, 1h
 </div>
 
 
 <h2 id="introducción">Introducción</h2>
 
+<p>Lo sepas o no es muy probable que estés interactuando con bases de datos varias veces por día. Hoy en día hay bases de datos presentes en todos lados. Puedes encontrarlas detrás de muchos sitios web, en los sistemas bancarios, en los sistemas de telecomunicaciones, en implementaciones de sensores, y en muchos otros lugares más.</p>
+
 <p>A las bases de datos y a los sistemas de administración de bases de datos solemos representarlos gráficamente de la siguiente manera:</p>
 
 <p><img src="basededatos.png?width=10pc" alt="Base de Datos" /></p>
 
-<p>Pero&hellip;</p>
+<p>Y a continuación nos haremos dos preguntas&hellip;</p>
 
 <h5 id="qué-es-una-base-de-datos">Qué es una base de datos?</h5>
 
@@ -599,7 +603,7 @@ gantt
 </div>
 
 
-<p>Nos encontramos con siete adjetivos:</p>
+<p>En esta definición nos encontramos con siete adjetivos:</p>
 
 <ol>
 <li>&ldquo;Multiusuario&rdquo;</li>
@@ -611,7 +615,239 @@ gantt
 <li>&ldquo;Seguro&rdquo;</li>
 </ol>
 
-<p>Veamos en detalle cada uno de estos siete adjetivos que determinan a un sistema de administración de base de datos.</p>
+<p>Veamos en detalle cada uno de estos adjetivos que determinan a un sistema de administración de base de datos.</p>
+
+<p><strong>Multiusuario</strong>. Múltiples usuarios pueden estar operando simultáneamente sobre la misma base de datos. Muchas aplicaciones pueden acceder a los datos de forma concurrente. El DBMS cuenta con mecanismos de control de concurrencia que aseguran que los datos permanezcan consistentes y no haya interacciones inesperadas entre los usuarios. El control de concurrencia tiene alguna similitud al control de concurrencia que se puede hacer a nivel de archivos o variables; pero en este caso se centra en los datos.</p>
+
+<p><strong>Masivo</strong>. Un DBMS está preparado para manejar datos a escala masiva. Hoy en día un DBMS puede gestionar terabytes de datos, o  incluso terabytes de datos generados diariamente.</p>
+
+<p><strong>Persistente</strong>. Los datos de una base de datos sobreviven a los programas que se ejecutan y utilizan dichos datos. En la ejecución de un programa informático típico, creamos y operamos con variables; y cuando el programa finaliza las variables desaparecen. En un DBMS los datos trascienden a los programas. Los programas se inician y terminan, pero los datos permanecen en el DBMS.</p>
+
+<p><strong>Eficiente</strong>. Los DBMS ejecutan miles de consultas o actualizaciones por segundo. Y dichas consultas no son necesariamente simples; sino que pueden resultar ser operaciones muy complejas. Por lo tanto, construir un sistema de base de datos que pueda ejecutar consultas  complejas a ese ritmo, sobre enormes cantidades de datos no es una tarea simple; y esa es una de las principales características que proporciona un sistema de administración de bases de datos.</p>
+
+<p><strong>Confiable</strong>. Es de vital importancia que un sistema de base de datos esté en funcionamiento prácticamente todo el tiempo. Es crítico que un DBMS sea fiable estando prácticamente disponible todo el tiempo para sus usuarios y aplicaciones.</p>
+
+<p><strong>Conveniente</strong>. La conveniencia es quizá una de las características más críticas de los sistemas de administración de bases de datos. Un DBMS está diseñado para que resulte fácil trabajar con grandes cantidades de datos. En las bases de datos existe un concepto conocido como &ldquo;Independencia física de los datos&rdquo;. Lo que nos dice este concepto es que la manera en que pensamos las estructuras de los datos es independiente de la forma en que los datos están realmente almacenados y dispuestos en disco. Así, las bases de datos suelen ser consultadas con lenguajes declarativos de muy alto nivel. En las consultas que realizamos describimos qué datos queremos sin necesidad de especificar un algoritmo que determine cómo obtener dichos datos. Podemos escribir consultas de una forma muy sencilla, y luego el sistema mismo encontrará el algoritmo para obtener el resultado de manera eficiente.</p>
+
+<p><strong>Seguro</strong>. Un DBMS garantiza que los datos administrados por el sistema permanecerán en un estado coherente y no se perderán ni se sobreescribirán cuando haya fallas de hardware o software; e incluso simples cortes de energía. Por lo tanto, los sistemas de bases de datos incluyen una serie de mecanismos integrados que garantizan que los datos permanecen consistentes, independientemente de lo que suceda.</p>
+
+<hr />
+
+<p>Hay cuatro conceptos clave que cubriremos a continuación.</p>
+
+<p>El primer concepto clave el de <strong>modelo de datos</strong>. El modelo de datos es una descripción general de como se estructuran los datos en una base de datos. Uno de los modelos de datos más comunes y populares es el llamado modelo de datos relacional. En el modelo relacional los datos se manejan como conjuntos de registros. Sin embargo, esta no es la única forma de estructurar los datos. Otra forma de estructurarlos es utilizando XML. En XML los datos se manejan con estructuras jerárquicas etiquetadas. Otro modelo es el grafos en los que los datos se estructuran como nodos y aristas.</p>
+
+<p>El segundo concepto clave es el de <strong>esquema vs datos</strong>. El esquema determina la estructura de la base de datos. Quizá en mi base de datos maneje una estructura de clientes y proveedores, con sus direcciones de correo electrónico y teléfonos de contacto. Esa estructura será el esquema que luego alojará los datos de cada uno de mis clientes y proveedores. En general, el esquema se configura al principio y no cambia con demasiada frecuencia. Quizá en algún momento quiera agregar algún atributo adicional de mis clientes como podría ser la edad. En cambio los datos cambian con mucha mas frecuencia, agregamos nuevos clientes todos los días y los proveedores nos entregan nuevos productos todas las semanas.</p>
+
+<p>A continuación entra el tercer concepto clave. Para configurar el esquema, se suele utilizar lo que se conoce como <strong>lenguaje de definición de datos</strong>. A veces se utilizan herramientas de diseño de nivel superior que ayudan a pensar el diseño y luego el diseño se materializa mediante el lenguaje de definición de datos. En síntesis, el lenguaje de definición de datos se usa para configurar un esquema o estructura de una base de datos en particular.</p>
+
+<p>Una vez configurado el esquema es posible comenzar a ingresar, consultar y modificar datos. Normalmente esas operaciones se hacen con lo que se conoce como <strong>lenguaje de manipulación de datos</strong>.</p>
+
+<div class="notices tip" ><p>En general nos referimos al lenguaje de definción de datos como <strong>DDL</strong> y al lenguaje manipulación de datos como <strong>DML</strong>. Esto se debe a sus siglas en inglés &ldquo;Data Definition Language&rdquo; y &ldquo;Data Manipulation Language&rdquo; respectivamente.</p>
+</div>
+
+
+<hr />
+
+<p>Existen distintos roles que toman las personas según la forma en que se involucran con una base de datos.</p>
+
+<p>El <strong>implementador</strong> es la persona que construye un DBMS. El contenido de este curso no está enfocado en este rol. Si tu idea es crear un nuevo DBMS, entonces los temas contenidos en este curso serán necesarios pero no suficientes para tí.</p>
+
+<p>Luego está el <strong>diseñador</strong> de la base de datos. El diseñador establece el esquema para una base de datos. Supongamos que tenemos que desarrollar una aplicación y queremos determinar cómo vamos a estructurar los datos antes de construirla. Ese es el trabajo del diseñador de la base de datos. Es un trabajo sorprendentemente difícil cuando tienes una aplicación que involucra información muy compleja.</p>
+
+<p>Una vez establecida la estructura de la base de datos, hay que construir la aplicación y desarrollar los programas que se ejecutarán sobre la base de datos, interactuando entre el usuario final y los datos en sí. Ese es el trabajo del <strong>desarrollador</strong>.</p>
+
+<p>Por último encontramos al <strong>administrador de la base de datos</strong>. Es quien pone en funcionamiento a la base de datos y la mantiene funcionando sin problemas. Este es trabajo muy importante sobre todo cuando implica bases de datos grandes. Los sistemas de bases de datos suelen contar con una serie de parámetros de ajuste asociados, y hacer que esos parámetros sean adecuados pueden marcar una diferencia significativa en el rendimiento de un DBMS. Es por eso que los administradores de bases de datos son altamente valorados, y suelen estar muy bien pagados.</p>
+
+<div class="notices tip" ><p>Es muy común referirse al administrador de base de datos con el término <strong>DBA</strong>. El origen de dicho término está determinado por las siglas en inglés de Data Base Administrator.</p>
+</div>
+
+
+<p>En este curso nos enfocaremos principalmente en contenidos que tienen que ver principalmente con el diseño y desarrollo de aplicaciones. Veremos algunos temas que tienen que ver con la administración, pero en general pensando desde la perspectiva del desarrollador de aplicaciones y usuario de la base de datos.</p>
+
+<hr />
+
+<h2 id="el-modelo-relacional">El modelo relacional</h2>
+
+<p>El modelo relacional nació hace más de 40 años cuando el científico informático inglés Ted Codd propuso que los sistemas de bases de datos debían presentarle los datos a los usuarios en vistas organizadas como tablas. A dichas vistas organizadas como tablas, Codd las llamó <strong>relaciones</strong>. Detrás de escena podrían existir estructuras de datos complejas que permitieran dar respuesta rápida a diversidad de consultas. Pero a diferencia de los sistemas de bases de datos anteriores el usuario de la base de datos no debería preocuparse por dichas estructuras de almacenamiento. Las consultas podrían expresarse en un lenguaje de alto nivel haciendo más eficiente el trabajo de los programadores. A lo largo de este curso profundizaremos en SQL, el lenguaje más importante basado en el modelo relacional.</p>
+
+<p>Hoy en día, el modelo relacional es el más difundido del mundo con un gran número de implementaciones comerciales eficientes. Es un modelo extremadamente simple y ofrece la posibilidad de consultar la base de datos utilizando el lenguaje SQL.</p>
+
+<p>La construcción primaria del modelo relacional es la <strong>relación</strong>. Una base de datos está conformada por un conjunto de relaciones, también llamadas <strong>tablas</strong>. Una relación es una tabla de dos dimensiones conformadas por filas y columnas. Veamos esto con un ejemplo. Nuestro ejemplo será una base de datos de álbumes musicales. Aquí comenzaremos con una tabla de álbumes.</p>
+
+<p><img src="Tabla.png?width=20pc" alt="Tabla" /></p>
+
+<p>Luego tenemos el concepto de <strong>atributo</strong>. Cada relación tiene un conjunto predefinido de columnas o atributos, cada uno de los cuales tiene un nombre. Para nuestra tabla de álbumes, cada álbum tiene los siguientes atributos: identificación (AlbumId), título y tapa.</p>
+
+<p><img src="TablaYColumnas.png?width=30pc" alt="Tabla y Columnas" /></p>
+
+<p>A continuación, los datos reales se almacenan en <strong>tuplas</strong> o <strong>filas</strong> de la tabla.  Cada atributo o columna de la tabla tiene un <strong>tipo</strong> (a veces denominado <strong>dominio</strong>). Por ejemplo, el identificador del álbum puede ser un número entero, el nombre puede ser una cadena de caracteres, la tapa puede ser un archivo png.</p>
+
+<p>Al nombre de la relación junto al conjunto de atributos que la definen se los conoce como <strong>esquema</strong> de la relación. Al conjunto de esquemas de todas las relaciones de la base de datos se lo llama esquema de base de datos.</p>
+
+<p><img src="Tuplas.png?width=30pc" alt="Tuplas" /></p>
+
+<p>Existe un valor especial que está en cualquier tipo de cualquier columna conocido como <strong>nulo</strong>. El concepto de nulo es muy importante en las bases de datos relacionales. Los valores nulos se utilizan para denotar que un valor particular puede ser desconocido o no definido.</p>
+
+<p>Otro concepto importante en las bases de datos relacionales es el <strong>clave</strong>. Una clave es un atributo en una relación donde cada valor para ese atributo es único. Entonces, si nos fijamos en la relación de los álbumes, podemos estar casi seguros de que el identificador del álbum será una clave. En otras palabras, cada tupla de la relación álbumes tendrá un identificador único. Puede que te estés preguntando por qué es importante tener atributos que se identifican como claves. En realidad, a las claves se le pueden dar varios usos. Uno de ellos es solo para identificar tuplas específicas. Por lo tanto, si desea ejecutar una consulta para obtener una tupla específica de la base de datos, lo haría solicitando esa tupla por su clave. Otro uso posible es el de los <strong>índices</strong>. Los índices son estructuras que se pueden utilizar en las bases de datos y que permiten encontrar muy rápido tuplas específicas.</p>
+
+<p>Veamos ahora cómo se crean relaciones o tablas en el lenguaje SQL. Es muy simple:</p>
+
+<pre><code class="language-sql">CREATE TABLE &quot;albums&quot;
+(
+    [AlbumId] INTEGER,
+    [Title] NVARCHAR(160)
+);
+</code></pre>
+
+<p>A medida que vayamos avanzando en el curso iremos viendo con mucho más detalle todos estos conceptos.</p>
+
+<hr />
+
+<h2 id="consultando-bases-de-datos-relacionales">Consultando bases de datos relacionales</h2>
+
+<p>Veamos a continuación los pasos básicos para crear y utilizar una base de datos relacional.
+El primer paso es diseñar el esquema de la base de datos y luego crear el esquema usando un lenguaje de definición de datos. El esquema consiste en la estructura de las relaciones y los atributos de esas relaciones.
+El siguiente paso es cargar la base de datos con los datos iniciales. Es bastante común que la base de datos se cargue inicialmente a partir de datos que provienen de una fuente externa. Una vez cargados los datos, tenemos un montón de tuplas en nuestras relaciones.
+Ahora, estamos listos para consultar y modificar datos. Luego vamos a tener usuarios humanos que consultan directamente a la base de datos. Eso suele suceder a través de una aplicación o un sitio web; aparecerá un usuario, hará una consulta a la base de datos y obtendrá una respuesta. También habrá usuarios que quieran insertar nuevos datos o actualizar algunos de los datos.
+Ese es el paradigma básico de consultar y actualizar bases de datos relacionales.</p>
+
+<p>En todos los lenguajes de consulta relacionales, cuando realizas una consulta a través de un conjunto de relaciones, se obtiene una relación como resultado. El álgebra relacional es un lenguaje formal que está muy bien fundamentado teóricamente. Por el contrario, SQL es un lenguaje real o implementado. Ese es el que se va a ejecutar en una aplicación de base de datos implementada real. Pero el lenguaje SQL tiene como base el álgebra relacional.</p>
+
+<hr />
+
+<h2 id="ejercitación">Ejercitación</h2>
+
+<p>Para la mayor parte de los ejercicios de este curso hemos elegido el DBMS <strong>SQLite</strong>.</p>
+
+<p>SQLite es una librería desarrollada en lenguaje C que implementa un DBMS SQL pequeño, rápido, autónomo y de alta confiabilidad. SQLite es el DBMS más utilizado del mundo. Está integrado en prácticamente todos los teléfonos móviles y en una gran cantidad de computadoras. También suele estar incluido en infinidad de otras aplicaciones que la gente usa diariamente.</p>
+
+<p>SQLite no es comparable a los DBMS SQL cliente / servidor tradicionales, como MySQL, Oracle, PostgreSQL o SQL Server. Por qué motivo no es comparable? SQLite trata de resolver problemas diferentes.</p>
+
+<p>Los motores de base de datos SQL cliente / servidor se esfuerzan por implementar un repositorio compartido de datos empresariales. Hacen énfasis en la escalabilidad, la concurrencia, la centralización y el control. SQLite se esfuerza por proporcionar almacenamiento de datos local para aplicaciones y dispositivos individuales. SQLite hace énfasis en la economía, la eficiencia, la confiabilidad, la independencia y la simplicidad.</p>
+
+<p>Para este curso hemos elegido SQLite debido a que es fácil de configurar y usar. Es un buen DBMS para aprender SQL. Como estudiante vas a poder crear fácilmente tantas bases de datos como quieras y podrás incluso intercambiarlas por correo electrónico con tus compañeros o instructores para hacer comentarios o revisiones. Adicionalmente, si tu interés es estudiar cómo se implementa un RDBMS, el código SQLite modular, bien comentado y documentado puede servir como una buena base para tu estudio.</p>
+
+<p>Si aún no has configurado tu ambiente de trabajo, éste es el momento! Recuerda que hemos dejado un instructivo de instalación de SQLite en la sección <a href="../configuracion">Configuración</a></p>
+
+<hr />
+
+<p>Una vez que hayas preparado el ambiente de trabajo y antes de introducirnos en la práctica del lenguaje SQL, es necesario que te familiarices con algunos comandos propios de la interface de SQLite (sqlite3).</p>
+
+<p>El proyecto SQLite proporciona un programa de línea de comandos llamado <code>sqlite3</code> que permite al usuario ingresar y ejecutar manualmente sentencias SQL contra una base de datos SQLite. A continuación hacemos una breve introducción al uso del programa <code>sqlite3</code>.</p>
+
+<p>Inicia el programa escribiendo <code>sqlite3</code> desde la línea de comandos, opcionalmente seguido del nombre del archivo que contiene la base de datos SQLite. Si el archivo nombrado no existe, se creará automáticamente un nuevo archivo de base de datos con el nombre provisto. Si no se especifica ningún archivo de base de datos en la línea de comandos, se crea una base de datos temporal que se eliminará cuando el programa <code>sqlite3</code> finalice su ejecución.</p>
+
+<p>Para iniciar <code>sqlite3</code> con la base provista en el curso para la resolución de los ejercicios dirígete a la carpeta que contiene el programa:</p>
+
+<pre><code class="language-cmd">c:\&gt;cd c:\sqlite
+</code></pre>
+
+<p>Luego ejecuta el comando <code>sqlite3</code> seguido del nombre del archivo que contiene la base de datos provista para la ejercitación:</p>
+
+<pre><code class="language-cmd">c:\sqlite&gt;sqlite3 chinook.db
+SQLite version 3.26.0 2018-12-01 12:34:55
+Enter &quot;.help&quot; for usage hints.
+sqlite&gt;
+</code></pre>
+
+<p>Al iniciarse, el programa <code>sqlite3</code> mostrará un breve mensaje y quedará a la espera de la próxima instrucción.</p>
+
+<div class="notices tip" ><p>Puedes presionar <code>CONTROL+C</code> para interrumpir la ejecución de <code>sqlite3</code></p>
+</div>
+
+
+<p>Generalmente <code>sqlite3</code> leerá las líneas de entrada y las pasará a la librería SQLite para su ejecución. Sin embargo, las líneas de entrada que comienzan con un punto (&ldquo;.&rdquo;) son interceptadas e interpretadas por el propio programa <code>sqlite3</code>. Estos &ldquo;comandos de punto&rdquo; también llamados <strong>dot commands</strong> se usan normalmente para cambiar el formato de salida de las consultas o para ejecutar ciertas instrucciones de consulta preempaquetadas.</p>
+
+<p>Para obtener una lista completa de los comandos de punto disponibles, puedes ingresar <code>.help</code> sin argumentos. O ingresa <code>.help COMANDO</code> para obtener información detallada sobre COMANDO:</p>
+
+<pre><code class="language-cmd">sqlite&gt; .help
+.archive ...             Manage SQL archives
+.auth ON|OFF             Show authorizer callbacks
+.backup ?DB? FILE        Backup DB (default &quot;main&quot;) to FILE
+...
+...
+...
+.vfsname ?AUX?           Print the name of the VFS stack
+.width NUM1 NUM2 ...     Set column widths for &quot;column&quot; mode
+sqlite&gt;
+</code></pre>
+
+<p>Algunas reglas para los comandos de punto:</p>
+
+<ul>
+<li>Un comando de punto debe comenzar con el <code>.</code> en el margen izquierdo sin espacios en blanco precedentes.</li>
+<li>El comando de punto debe estar completamente contenido en una sola línea de entrada.</li>
+<li>Un comando de punto no puede ocurrir en medio de una instrucción SQL ordinaria.</li>
+<li>Los comandos de punto no reconocen comentarios.</li>
+<li>Los comandos de punto son interpretados por el programa de línea de comandos sqlite3.exe, no por el propio SQLite.</li>
+</ul>
+
+<div class="notices note" ><p>Es muy importante que puedas establecer la diferencia entre los comandos del lenguaje SQL y los comandos propios de la interface de SQLite. A estos últimos se los conoce como <strong>dot commands</strong> y se caracterizan por comenzar con el caracter &ldquo;punto&rdquo;. Los comandos de punto son directamente ejecutados por el programa <code>sqlite3</code>, mientras que los comandos del lenguaje SQL son ejecutados por la librería SQLite invocada desde <code>sqlite3</code> al submitir la instrucción.</p>
+</div>
+
+
+<p><code>sqlite3</code> proporciona varios comandos que son útiles para observar el esquema de la base de datos. Por ejemplo, para ver una lista de las tablas en la base de datos, puedes ingresar <code>.tables</code>.</p>
+
+<pre><code class="language-cmd">sqlite&gt; .tables
+albums          employees       invoices        playlists
+artists         genres          media_types     tracks
+customers       invoice_items   playlist_track
+sqlite&gt;
+</code></pre>
+
+<p>El comando <code>.indexes</code> lista todos los índices. Si al comando <code>&quot;.indexes</code> se le agrega el nombre de una tabla como argumento, muestra solamente los índices pertenecientes a dicha tabla.</p>
+
+<pre><code class="language-cmd">sqlite&gt; .indexes employees
+IFK_EmployeeReportsTo
+sqlite&gt;
+</code></pre>
+
+<p>El comando &ldquo;.schema&rdquo; muestra la estructura completa de la base de datos, o de una sola tabla si se proporciona un argumento con el nombre de tabla:</p>
+
+<pre><code class="language-cmd">sqlite&gt; .schema albums
+CREATE TABLE IF NOT EXISTS &quot;albums&quot;
+(
+    [AlbumId] INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+    [Title] NVARCHAR(160)  NOT NULL,
+    [ArtistId] INTEGER  NOT NULL,
+    FOREIGN KEY ([ArtistId]) REFERENCES &quot;artists&quot; ([ArtistId])
+                ON DELETE NO ACTION ON UPDATE NO ACTION
+);
+CREATE INDEX [IFK_AlbumArtistId] ON &quot;albums&quot; ([ArtistId]);
+sqlite&gt;
+</code></pre>
+
+<p>Ahora que ya estás familiarizado con la interface y algunos de los comandos de punto más importantes, avancemos con el lenguaje SQL!</p>
+
+<hr />
+
+<p>Cuando escribas código SQL, asegúrate de finalizar el comando con un punto y coma. El programa <code>sqlite3</code> busca un punto y coma para saber cuándo finaliza un comando SQL. Si se omite el punto y coma, <code>sqlite3</code> lo interpretará como una solicitud de continuación en la siguiente línea y esperará a que ingreses más texto. Esta es una característica que te permite ingresar comandos SQL que abarcan varias líneas. Presiona <code>Enter</code> para ejecutar la instrucción. Por ejemplo:</p>
+
+<pre><code class="language-cmd">sqlite&gt; select lastname from employees;
+Adams
+Edwards
+Peacock
+Park
+Johnson
+Mitchell
+King
+Callahan
+sqlite&gt;
+</code></pre>
+
+<pre><code class="language-cmd">sqlite&gt; select lastname
+   ...&gt; from employees;
+Adams
+Edwards
+Peacock
+Park
+Johnson
+Mitchell
+King
+Callahan
+sqlite&gt;
+</code></pre>
 
 
 <footer class=" footline" >
@@ -942,20 +1178,20 @@ gantt
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/base-de-datos/js/clipboard.min.js?1545178857"></script>
-    <script src="/base-de-datos/js/perfect-scrollbar.min.js?1545178857"></script>
-    <script src="/base-de-datos/js/perfect-scrollbar.jquery.min.js?1545178857"></script>
-    <script src="/base-de-datos/js/jquery.sticky.js?1545178857"></script>
-    <script src="/base-de-datos/js/featherlight.min.js?1545178857"></script>
-    <script src="/base-de-datos/js/html5shiv-printshiv.min.js?1545178857"></script>
-    <script src="/base-de-datos/js/highlight.pack.js?1545178857"></script>
+    <script src="/base-de-datos/js/clipboard.min.js?1545621148"></script>
+    <script src="/base-de-datos/js/perfect-scrollbar.min.js?1545621148"></script>
+    <script src="/base-de-datos/js/perfect-scrollbar.jquery.min.js?1545621148"></script>
+    <script src="/base-de-datos/js/jquery.sticky.js?1545621148"></script>
+    <script src="/base-de-datos/js/featherlight.min.js?1545621148"></script>
+    <script src="/base-de-datos/js/html5shiv-printshiv.min.js?1545621148"></script>
+    <script src="/base-de-datos/js/highlight.pack.js?1545621148"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/base-de-datos/js/modernizr.custom.71422.js?1545178857"></script>
-    <script src="/base-de-datos/js/learn.js?1545178857"></script>
-    <script src="/base-de-datos/js/hugo-learn.js?1545178857"></script>
+    <script src="/base-de-datos/js/modernizr.custom.71422.js?1545621148"></script>
+    <script src="/base-de-datos/js/learn.js?1545621148"></script>
+    <script src="/base-de-datos/js/hugo-learn.js?1545621148"></script>
 
-    <link href="/base-de-datos/mermaid/mermaid.css?1545178857" type="text/css" rel="stylesheet" />
-    <script src="/base-de-datos/mermaid/mermaid.js?1545178857"></script>
+    <link href="/base-de-datos/mermaid/mermaid.css?1545621148" type="text/css" rel="stylesheet" />
+    <script src="/base-de-datos/mermaid/mermaid.js?1545621148"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
